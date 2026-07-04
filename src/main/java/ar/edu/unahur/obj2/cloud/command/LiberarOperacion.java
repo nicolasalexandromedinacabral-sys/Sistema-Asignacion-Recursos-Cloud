@@ -17,12 +17,12 @@ public class LiberarOperacion implements Operacion {
 
     @Override
     public void execute() {
-        cluster.asignarCapacidad(cantidadvCPUs);
+        cluster.liberarCapacidad(cantidadvCPUs);
     }
 
     @Override
     public void undo() {
-        cluster.liberarCapacidad(cantidadvCPUs);
+        cluster.asignarCapacidad(cantidadvCPUs);
     }
 
 }
